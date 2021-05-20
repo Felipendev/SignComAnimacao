@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to right top, #FF8C00, #FFFF00);
+}
+
+#ativar {
+    display: block;
+    position: absolute;
+    top: 20px;
+    z-index: 1030;
+    display: block;
+    font-family: sans-serif;
+    font-size: 1rem;
+    padding: .6rem 2rem;
+    border: none;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    border-radius: 4px;
+    color: #402d00;
+    cursor: pointer;
+}
+
+#glass {
+    display: flex;
+    width: 60%;
+    background: white;
+    min-height: 80vh;
+    z-index: 2;
+    border-radius: 2rem;
+    backdrop-filter: blur(2rem);
+    opacity: 0;
+    transform: translateY(-80px);
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+}
+
+#circle1,
+#circle2 {
+    background: white;
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0;
+    transform: translateY(-80px);
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3));
+}
+
+#circle3,
+#circle4,
+#circle5,
+#circle6 {
+    background: white;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0.5;
+    transform: translateY(-80px);
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3));
+}
+
+#circle1 {
+    bottom: 5%;
+    left: 10%;
+}
+
+#circle2 {
+    top: 5%;
+    right: 15%;
+}
+
+#circle3 {
+    bottom: 1%;
+    left: 40%;
+}
+
+#circle4 {
+    top: 10%;
+    right: 15%;
+}
+
+#circle5 {
+    top: 10%;
+    left: 10%;
+}
+
+#circle6 {
+    bottom: 1%;
+    right: 90%;
+}
+
+
+/* Template SignIn */
+
+#modal h1 {
+    font-family: sans-serif;
+    margin: 0px 0px 20px;
+}
+
+#modal label {
+    display: block;
+    font-family: sans-serif;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+#modal input {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: .5rem;
+    font-size: 1rem;
+    background: transparent;
+}
+
+#modal button {
+    display: block;
+    margin-top: 20px;
+    font-family: sans-serif;
+    font-size: 1rem;
+    padding: .6rem 2rem;
+    border: none;
+    background: #ffb801;
+    border-radius: 4px;
+    color: #402d00;
+    cursor: pointer;
+}
+
+#modal button img {
+    width: 20px;
+    position: absolute;
+}
+
+#modal {
+    padding: 30px;
+    margin: auto;
+    border-radius: 4px;
+    box-shadow: 0 1.8px 1.2px rgba(0, 0, 0, 0.04), 0 3.7px 2.3px rgba(0, 0, 0, 0.04), 0 6.5px 5px rgba(0, 0, 0, 0.06), 0 12.3px 9.9px rgba(0, 0, 0, 0.02), 0 21.8px 16.4px rgba(0, 0, 0, 0.06), 0 50px 40px rgba(0, 0, 0, 0.02);
+    width: 400px;
+    height: 300px;
+    opacity: 0;
+    transform: translateY(-80px);
+}
+
+#modal.animar {
+    animation: slide .5s forwards;
+}
+
+#glass.animar {
+    animation: slide 2s forwards;
+}
+
+#circle1.animar,
+#circle2.animar {
+    animation: slide 5s forwards ease-out;
+}
+
+.load {
+    right: 50%;
+    bottom: 12%;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 4px solid;
+    border-radius: 50%;
+    border-top-color: transparent;
+    margin: 0 auto;
+    color: #FF8C00;
+    animation: load linear infinite .8s;
+}
+
+#load.active {
+    width: 40px;
+    height: 40px;
+    border: 4px solid;
+}
+
+@keyframes slide {
+    to {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+@keyframes load {
+    0% {
+        transform: rotate(360deg);
+    }
+    50% {
+        color: #ffb801;
+    }
+}
